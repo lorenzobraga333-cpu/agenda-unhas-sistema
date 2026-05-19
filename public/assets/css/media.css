@@ -1,0 +1,180 @@
+@media screen and (max-width: 1024px){
+
+    header{
+        padding: 16px 8%;
+    }
+
+    .banner-conteudo{
+        max-width: 600px;
+    }
+
+    #inicio h2{
+        font-size: 32px;
+        max-width: 600px;
+        line-height: 1.1;   
+    }
+
+    #inicio p{
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
+    #inicio a{
+        padding: 9px 3%;
+        font-size: 15px;
+    }
+
+    #servicos h2{
+        font-size: 32px;
+    }
+
+    .servicos-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .servicos-card{
+        display: flex;
+        flex-direction: column;
+        padding:20px 4%;
+        min-height: 200px;
+        justify-content: space-between;
+    }
+
+    .servicos-tags{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .modelos-container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .modelo-botao{
+        padding: 15px 2% 13px;
+        font-size: 15px;
+    }
+
+    #agendamento{
+        text-align: center;
+       grid-template-columns: 1fr;
+    }
+
+    .agendamento-form{
+        max-width: 100%;
+    }
+
+    #agendamento p{
+        font-size: 14px;
+    }
+
+    .botao-agendamento{
+        
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    header h1{
+        font-size: 21px;
+    }
+
+    nav{
+        gap: 32px;
+    }
+
+    nav a{
+        font-size: 16px;
+    }
+
+    #inicio h2{
+    font-size: 31px;
+}
+
+    #inicio p{
+    font-size: 15px;  
+}
+
+    .servicos-container{
+        grid-template-columns: repeat(2, 1fr);
+}
+
+    .modelos-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #agendamento{
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px){
+    
+    header h1{
+        font-size: 15px;
+    }
+
+    nav{
+        gap: 11px;
+    }
+
+    nav a{
+        font-size: 11px;
+    }
+
+    .servicos-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pagamento-container{
+        flex-direction: column;
+        max-width: 350px;
+    }
+
+    .modelos-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .agendamento-form form{
+        grid-template-columns: 1fr;
+    }
+
+    .profissao-marca{
+    font-size: 11.5px;
+}
+
+.nome-marca{
+    font-size: 11.5px;
+}
+
+.footer-redes a{
+    font-size: 10px;
+}
+
+.footer-atendimento h3{
+    font-size: 11px;
+}
+
+.footer-atendimento p{
+    font-size: 9.5px;
+}
+
+.footer-info h2{
+    font-size: 11px;
+}
+
+.footer-info p{
+    font-size: 9.5px;
+}
+
+
+.footer-copy p{
+    font-size: 9px;
+}
+}

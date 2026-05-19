@@ -1,0 +1,522 @@
+@font-face {
+    font-family: "fonteCabecalho";
+    src: url(../font/Montserrat-Medium.ttf);
+}
+@font-face{
+    font-family: "fonteServico";
+    src: url(../font/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: "fonteParagrafo";
+    src: url(../font/Poppins-Medium.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #FFF7F9;
+    color: #2b2b2b;
+}
+
+header{
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+    justify-content: space-between;
+}
+
+header h1{
+    font-family: "fonteCabecalho";
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-profissao{
+    color: #c45b7c;
+}
+
+.logo-nome{
+    color: #5a2638;
+}
+
+nav{
+    display: flex;
+    gap: 55px;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: #5A2638;
+    font-size: 18px;
+    font-family: "fonteParagrafo";
+    transition: 0.3s all;
+}
+
+nav a:hover{
+    color: #C45B7C;
+    transition: 0.3s all;
+}
+
+#inicio{
+    padding: 50px 8% 50px;
+    background:
+    radial-gradient(circle at 85% 20%, rgba(196, 91, 124, 0.18), transparent 30%),
+    radial-gradient(circle at 10% 85%, rgba(255, 255, 255, 0.85), transparent 35%),
+    linear-gradient(to right, #FDE2E8, #FFF7F9); 
+}
+
+.banner-conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 800px;
+}
+
+#inicio h2{
+    font-family: "fonteCabecalho";
+    font-size: 38px;
+    max-width: 780px;
+    color: #5A2638;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+#inicio p{
+    font-family: "fonteParagrafo";
+    font-size: 18px;
+    max-width: 500px;
+    line-height: 1.5;
+    margin-bottom: 70px;
+    color: #6F5F66;
+}
+
+#inicio a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #C45B7C;
+    color: #FFFFFF;
+    padding: 11px 3%;
+    border-radius: 14px;
+    font-family: "fonteParagrafo";
+    font-size: 16px;
+    text-align: center;
+    transition: 0.4s;
+    align-self: flex-start;
+    box-shadow: 0px 8px 16px rgba(196, 91, 124, 0.35);
+}
+
+#inicio a:hover{
+    background-color: #A94668; 
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+#inicio a:active{
+    transform: translateY(2px);
+    box-shadow: 0px 4px 10px rgba(196, 91, 124, 0.25);
+}
+
+#servicos{
+    padding: 30px 8% 60px;
+    background: 
+    linear-gradient(to bottom, #FDF2F6, #FFF7F9);
+}
+
+#servicos h2{
+    font-family: "fonteCabecalho";
+    color: #5a2638;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.servicos-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.servicos-card{
+    background-color: #FFFFFF;
+    padding: 45px 5%;
+    border-radius: 18px;
+    border: 1px solid #F1D6DF;
+    box-shadow: 8px 9px 15px rgba(196, 91, 124, 0.25);
+}
+
+.servicos-card h3{
+    color: #5A2638;
+    font-family: "fonteServico";
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.servicos-card p{
+    color: #6F5F66;
+    font-family: "fonteParagrafo";
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin-bottom: 13px;
+}
+
+.servicos-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tag-preco{
+    background-color: #FCE7EF;
+    color: #5A2638;
+    border: 1px solid #F1C7D5;
+    border-radius: 14px;
+    font-family: "fonteServico";
+    font-size: 13.5px;
+    white-space: nowrap;
+    padding: 5px 1%;
+}
+
+#pagamento{
+    padding: 40px 8% 60px;
+    background: 
+    linear-gradient(to bottom, #FFF7F9, #FDE2E8)
+}
+
+#pagamento h2{
+    text-align: center;
+    font-family: "fonteCabecalho";
+    font-size: 30px;
+    color: #5A2638;
+    margin-bottom: 30px;
+}
+
+.pagamento-descricao{
+    text-align: center;
+    margin-top: -28px;
+    font-family: "fonteParagrafo";
+    font-size: 15.5px;
+    color: #6F5F66;
+    margin-bottom: 40px;
+}
+
+.pagamento-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.pagamento-card{
+    background-color: #FFFFFF;
+    padding: 50px 8%;
+    border-radius: 20px;
+    border: 1px solid #F1C7D5;
+    color: #5A2638;
+    font-family: "fonteServico";
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 8px 9px 15px rgba(196, 91, 124, 0.25);
+    min-width: 200px;
+}
+
+.pagamento-card p{
+    color: #6F5F66;
+    font-family: "fonteParagrafo";
+    font-size: 14px;
+}
+
+#modelo{
+    background: 
+    linear-gradient(to bottom, #FDE2E8, #FFF7F9);
+    padding: 30px 8% 60px;
+}
+
+#modelo h2{
+    text-align: center;
+    font-family: "fonteCabecalho";
+    font-size: 30px;
+    color: #5A2638;
+    margin-bottom: 15px;
+}
+
+#modelo p{
+    text-align: center;
+    font-family: "fonteParagrafo";
+    font-size: 16px;
+    color: #6F5F66;
+    margin-bottom: 40px;
+}
+
+.modelos-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+}
+
+.modelo-card{
+    display: flex;
+    min-height: 200px;
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    border: 1px solid #F1C7D5;
+    align-items: center;
+    box-shadow: 8px 9px 15px rgba(196, 91, 124, 0.25);
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.modelo-card:hover{
+    transform:
+        translateY(-2px)
+        scale(1.02);
+    box-shadow: 8px 9px 15px rgba(196, 91, 124, 0.35);
+}
+
+.modelo-card img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.modelo-botao{
+    display: block;
+    width: fit-content;
+    margin: 50px auto 0;
+    text-align: center;
+    text-decoration: none;
+    padding: 17px 2.5% 15px;
+    color: #FFFFFF;
+    background-color: #C45B7C;
+    border-radius: 18px;
+    font-family: "fonteParagrafo";
+    font-size: 16px;
+    box-shadow: 0px 8px 16px rgba(196, 91, 124, 0.35);
+    transition: 0.3s;
+}
+
+.modelo-botao:hover{
+    background-color: #A94668; 
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.modelo-botao:active{
+    transform: translateY(2px);
+    box-shadow: 0px 4px 10px rgba(196, 91, 124, 0.25);
+}
+
+#agendamento{
+    background: 
+    linear-gradient(to bottom, #FFF7F9, #FDE2E8);
+    padding: 30px 8% 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.agendamento-conteudo h2{
+    font-family: "fonteCabecalho";
+    font-size: 30px;
+    color: #5A2638;
+    margin-bottom: 15px;
+}
+
+.agendamento-conteudo p{
+    font-family: "fonteParagrafo";
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #6F5F66;
+}
+
+.agendamento-form{
+    background-color: #FFFFFF;
+    max-width: 580px;
+    padding: 20px 30px;
+    border-radius: 18px;
+    border: 1px solid #F1C7D5;
+    box-shadow: 8px 9px 15px rgba(196, 91, 124, 0.25);
+}
+
+.agendamento-form form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.campo-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo-form label{
+    color: #5A2638;
+    font-family: "fonteServico";
+    font-size: 15px;
+}
+
+.campo-form input,
+.campo-form select{
+    color: #6F5F66;
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    border: 1px solid #F1C7D5;
+    width: 100%;
+    padding: 10px 4% 10px;
+    font-family: "fonteParagrafo";
+    font-size: 12px;
+}
+
+.campo-form input:focus,
+.campo-form select:focus{
+    outline: none;
+    border-color: #C45B7C;
+    box-shadow: 0px 0px 8px rgba(196, 91, 124, 0.35);
+}
+
+.botao-agendamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: self-end;
+    background-color: #C45B7C;
+    border-radius: 18px;
+    font-family: "fonteParagrafo";
+    font-size: 16px;
+    box-shadow: 0px 8px 16px rgba(196, 91, 124, 0.35);
+    transition: 0.3s;
+    width: 100%;
+    padding: 10px 4% 10px;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.botao-agendamento:hover{
+    background-color: #A94668; 
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.botao-agendamento:active{
+    transform: translateY(2px);
+    box-shadow: 0px 4px 10px rgba(196, 91, 124, 0.25);
+}
+
+footer{
+    background-color: #FFF7F9;
+    padding: 15px 7% 10px;
+    border-top: 1px solid #F8D7E3;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    margin: 0 auto;
+    max-width: 850px;
+    gap: 30px;
+    align-items: start;
+}
+
+.footer-marca{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.profissao-marca{
+    font-family: "fonteServico";
+    font-size: 15px;
+    color: #C45B7C;
+    line-height: 1.3;
+}
+
+.nome-marca{
+    font-family: "fonteServico";
+    font-size: 15px;
+    color: #5A2638;
+    line-height: 1.3;
+    margin-top: -10px;
+}
+
+.footer-redes{
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.footer-redes a{
+    text-decoration: none;
+    color: #C45B7C;
+    font-family: "fonteServico";
+    font-size: 12.5px;
+    transition: 0.4s;
+}
+
+.footer-redes a:hover{
+    color: #A94668;
+}
+
+.footer-atendimento{
+    justify-self: center;
+}
+
+.footer-atendimento h3{
+    font-family: "fonteServico";
+    font-size: 15px;
+    color: #5A2638;
+    margin-bottom: 8px;
+}
+
+.footer-atendimento p{
+    font-family: "fonteServico";
+    font-size: 12px;
+    color: #6F5F66;
+}
+
+.footer-info{
+    justify-self: end;
+    text-align: left;
+}
+
+.footer-info h2{
+    font-family: "fonteServico";
+    font-size: 15px;
+    color: #5A2638;
+    margin-bottom: 8px; 
+}
+
+.footer-info p{
+    font-family: "fonteServico";
+    font-size: 11.5px;
+    color: #6F5F66;
+    line-height: 1.5;
+}
+
+.footer-copy{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-copy p{
+    font-family: "fonteServico";
+    font-size: 11px;
+    color: #6F5F66;
+}
