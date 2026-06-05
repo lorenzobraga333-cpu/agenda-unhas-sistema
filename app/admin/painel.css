@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 3% 22px;
+    margin-bottom: 20px;
+}
+
+.painel-tittle{
+    font-size: 22px;
+    color: #f0f0f0;
+    font-weight: 500;
+}
+
+.botao-sair{
+    display: flex;
+    align-items: center;
+}
+
+.botao-sair a{
+    font-size: 16.5px;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: #e74c3c;
+    color: #FFFFFF;
+    border-radius: 12px;
+    padding: 7px 18px 7px;
+    margin-right: 3%;
+    transition: 0.4s;
+}
+
+.botao-sair a:hover{
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.metricas-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 15px 10% 20px;
+    gap: 14px;
+}
+
+.metrica-card{
+    border-radius: 12px;
+    background-color: #2a2a2a;
+    padding: 20px 18px;
+}
+
+.metrica-card h2{
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+}
+
+.metrica-card p{
+    font-size: 25px;
+}
+
+.total p{
+    color: #f0f0f0;
+}
+
+.confirmado p{
+   color: #2ecc71;
+}
+
+.pendente p{
+    color: #f39c12;
+}
+
+.faturamento p{
+    color: #3498db;
+}
+
+.tabela-container{
+    border-radius: 12px;
+    border: 1px solid #333;
+    margin: 0 10% 20px;
+    overflow-x: auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+thead{
+    background-color: #252525;
+    border-bottom: 1px solid #333;
+}
+
+th{
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #888;
+    text-align: left;
+    padding: 12px 16px;
+    white-space: nowrap;
+}
+
+td{
+    padding: 12px 16px;
+    border-top: 1px solid #2a2a2a;
+    font-size: 13px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.badge-confirmado{
+    border-radius: 14px;
+    border: 1px solid #2ecc71;
+    background-color: #1a3a2a;
+    color: #2ecc71;
+    padding: 3px 7px;
+}
+
+.badge-pendente{
+    border-radius: 14px;
+    border: 1px solid #f39c12;
+    background-color: #3a2a0a;
+    color: #f39c12;
+    padding: 3px 7px;
+}
+
+.badge-cancelado{
+    border-radius: 14px;
+    border: 1px solid #c0392b;
+    background-color: #3a1a1a;
+    color: #c0392b;
+    padding: 3px 7px;
+}
+
+.acoes{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-confirmar,
+.btn-cancelar{
+    border: 1px solid #555;
+    border-radius: 7px;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 7px 12px 7px;
+    transition: 0.4s;
+}
+
+.btn-confirmar:hover,
+.btn-cancelar:hover{
+    background-color: #2a2a2a;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 1024px){
+    .metricas-container{
+        padding: 15px 4% 20px;
+    }
+
+    .tabela-container{
+        margin: 0 4% 20px;
+    }
+}
+
+@media (max-width: 768px){
+    .tabela-container{
+        margin: 0 2% 20px;
+    }
+}
+
+@media (max-width: 480px){
+    .painel-tittle{
+        font-size: 19px;
+    }
+
+    .botao-sair a{
+    font-size: 16px;
+    padding: 5px 14px 5px;
+    }
+    
+    .metricas-container{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 15px 2% 20px ;
+    }
+
+    .tabela-container{
+        margin: 0 0 20px;
+    }
+
+    th{
+        padding: 10px 10px;
+    }
+
+    td{
+        padding: 10px 10px;
+}   
+
+}

@@ -36,10 +36,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 ?>
 
-<form action="login.php" method="POST">
-<label for="email">E-mail:</label>
-<input type="email" id= "email" name= "email" placeholder= "Digite seu E-mail." required>
-<label for="senha">Senha:</label>
-<input type="password" id= "senha" name= "senha" placeholder= "Digite sua senha." required>
-<input type="submit" value= "Enviar >">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Acesso administrativo</h1>
+        <form action="login.php" method="POST">
+        <label for="email">E-mail:</label>
+        <input type="email" id= "email" name= "email" placeholder= "Digite seu E-mail." required>
+        <label for="senha">Senha:</label>
+        <input type="password" id= "senha" name= "senha" placeholder= "Digite sua senha." required>
+        <input type="submit" value= "Enviar >">
+        </form>
+    </div>
+</body>
+</html>

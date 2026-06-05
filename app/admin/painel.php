@@ -1,3 +1,4 @@
+
 <?php
     session_start();
 
@@ -6,28 +7,31 @@
         exit;
     }
 
-    echo '<a href="logout.php?">Sair</a>';
+    '<a href="logout.php?">Sair</a>';
 
     require_once __DIR__ . "/../config/conexao.php";
 
     $sqlAdmin = "SELECT * FROM agendamentos ORDER BY data, horario";
     $resultadoAdmin = $conn->query($sqlAdmin);
 
-    if($resultadoAdmin->num_rows > 0){
-     while($agendamento = $resultadoAdmin->fetch_assoc()){
-         echo "ID: " . intval($agendamento["id"]) . "<br>";
-         echo "Cliente: " . htmlspecialchars($agendamento ["cliente"]) . "<br>";
-         echo "Celular: " . htmlspecialchars($agendamento ["celular"]) . "<br>";
-         echo "Serviço: " . htmlspecialchars($agendamento ["servico"]) . "<br>";
-         echo "Data: " . htmlspecialchars($agendamento ["data"]) . "<br>";
-         echo "Horário: " . htmlspecialchars($agendamento ["horario"]) . "<br>";
-         echo "Status: " . htmlspecialchars($agendamento ["status"]) . "<br>";
-         echo '<a href="alterar-status.php?id=' . intval($agendamento["id"]) . '&status=confirmado">Confirmar</a>';
-         echo "<hr>";
-         echo '<a href="alterar-status.php?id=' . intval($agendamento["id"]) . '&status=cancelado">Cancelar</a>';
-         echo "<hr>";
-         }
-    } else {
-    echo "Nenhum agendamento encontrado.";
-    }
+    $total = "SELECT SUM(valor) as total FROM agendamentos WHERE status = 'confirmado'";
+    $sqlFaturamento = $conn->query($total);
+    $rowTotal = $sqlFaturamento->fetch_assoc();
+    $faturamento = $rowTotal["total"];
 
+    $agenda = "SELECT COUNT(*) as total FROM agendamentos";
+    $sqlAgendamentos = $conn->query($agenda);
+    $rowTotalAgendamentos = $sqlAgendamentos->fetch_assoc();
+    $totalAgendamentos = $rowTotalAgendamentos["total"];
+
+    $agendamentosConf = "SELECT COUNT(*) as total FROM agendamentos WHERE status = 'confirmado'";
+    $sqlAgendamentosConf = $conn->query($agendamentosConf);
+    $rowTotalConf = $sqlAgendamentosConf->fetch_assoc();
+    $totalAgendamentosConf = $rowTotalConf["total"];
+
+    $agendamentosPend = "SELECT COUNT(*) as total FROM agendamentos WHERE status = 'pendente'";
+    $sqlAgendamentosPend = $conn->query($agendamentosPend);
+    $rowTotalPend = $sqlAgendamentosPend->fetch_assoc();
+    $totalAgendamentosPend = $rowTotalPend["total"];
+
+    require_once __DIR__ . "/painel-layout.php";

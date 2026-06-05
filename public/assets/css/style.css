@@ -12,6 +12,7 @@
 }
 
 *{
+     overscroll-behavior: contain;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,8 +40,16 @@ header h1{
 }
 
 .logo-profissao{
+    display: flex;
+    gap: 4px;
     color: #c45b7c;
 }
+
+.icon-logo{
+    font-size: 14px;
+    color: #C45B7C;
+}
+    
 
 .logo-nome{
     color: #5a2638;
@@ -53,11 +62,19 @@ nav{
 }
 
 nav a{
+    display: flex;
+    gap: 8px;
+    align-items: center;
     text-decoration: none;
     color: #5A2638;
     font-size: 18px;
     font-family: "fonteParagrafo";
     transition: 0.3s all;
+}
+
+.icon-nav{
+    font-size: 14px;
+    color: #C45B7C;
 }
 
 nav a:hover{
@@ -66,18 +83,50 @@ nav a:hover{
 }
 
 #inicio{
-    padding: 50px 8% 50px;
+    min-height: 500px;
+    padding: 50px 8% 70px;
+    padding-top: 60px;
     background:
     radial-gradient(circle at 85% 20%, rgba(196, 91, 124, 0.18), transparent 30%),
     radial-gradient(circle at 10% 85%, rgba(255, 255, 255, 0.85), transparent 35%),
     linear-gradient(to right, #FDE2E8, #FFF7F9); 
 }
 
+.inicio-container{
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.inicio-foto{
+    overflow: hidden;
+    width: 54%;
+    height: 520px;
+    border-radius: 20px;
+    box-shadow: 
+    0 10px 30px rgba(196, 91, 124, 0.10),
+    0 30px 60px rgba(196, 91, 124, 0.18);
+
+}
+
+.inicio-foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .banner-conteudo{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 800px;
+    padding-top: 50px;
+    max-width: 600px;
+}
+
+.texto-rosa{
+    color: #C45B7C;
 }
 
 #inicio h2{
@@ -94,7 +143,7 @@ nav a:hover{
     font-size: 18px;
     max-width: 500px;
     line-height: 1.5;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     color: #6F5F66;
 }
 
@@ -103,14 +152,14 @@ nav a:hover{
     text-decoration: none;
     background-color: #C45B7C;
     color: #FFFFFF;
-    padding: 11px 3%;
-    border-radius: 14px;
+    padding: 8px 3%;
+    border-radius: 12px;
     font-family: "fonteParagrafo";
     font-size: 16px;
     text-align: center;
     transition: 0.4s;
     align-self: flex-start;
-    box-shadow: 0px 8px 16px rgba(196, 91, 124, 0.35);
+    box-shadow: 0px 8px 16px rgba(196, 91, 124, 0.25);
 }
 
 #inicio a:hover{
@@ -146,18 +195,47 @@ nav a:hover{
 
 .servicos-card{
     background-color: #FFFFFF;
-    padding: 45px 5%;
+    padding: 38px 5%;
     border-radius: 18px;
     border: 1px solid #F1D6DF;
-    box-shadow: 8px 9px 15px rgba(196, 91, 124, 0.25);
+    transition: 0.4s;
+    box-shadow: 0px 8px 12px rgba(196, 91, 124, 0.25);
+}
+
+.servicos-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px 2px rgba(196, 91, 124, 0.26);
 }
 
 .servicos-card h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #5A2638;
     font-family: "fonteServico";
     font-size: 18px;
-    text-align: center;
     margin-bottom: 25px;
+}
+
+.servicos-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+    border: #c45b7c;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #C45B7C;
+    background-color: #F1C7D5;
+    width: 40px;
+    height: 40px;
+    transition: 0.4s;
+}
+
+.servicos-card:hover .servicos-icon{
+    box-shadow: 0px 5px 20px rgba(196, 91, 124, 0.2);
+    background-color: #F8D7E3;
 }
 
 .servicos-card p{
@@ -187,9 +265,9 @@ nav a:hover{
 }
 
 #pagamento{
-    padding: 40px 8% 60px;
+    padding: 40px 8% 35px;
     background: 
-    linear-gradient(to bottom, #FFF7F9, #FDE2E8)
+    linear-gradient(to bottom, #FFF7F9, #FDE2E8);
 }
 
 #pagamento h2{
@@ -198,6 +276,10 @@ nav a:hover{
     font-size: 30px;
     color: #5A2638;
     margin-bottom: 30px;
+}
+
+#pagamento h3{
+    margin-bottom: 8px;
 }
 
 .pagamento-descricao{
@@ -219,15 +301,43 @@ nav a:hover{
 
 .pagamento-card{
     background-color: #FFFFFF;
-    padding: 50px 8%;
+    padding: 42px 30px;
     border-radius: 20px;
     border: 1px solid #F1C7D5;
     color: #5A2638;
     font-family: "fonteServico";
     font-size: 16px;
     text-align: center;
-    box-shadow: 8px 9px 15px rgba(196, 91, 124, 0.25);
+    box-shadow: 0px 6px 14px rgba(196, 91, 124, 0.18);
     min-width: 200px;
+    min-height: 200px;
+    transition: 0.4s;
+}
+
+.pagamento-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 18px rgba(196, 91, 124, 0.28);
+}
+
+.pagamento-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+    border: #c45b7c;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #C45B7C;
+    background-color: #F1C7D5;
+    width: 40px;
+    height: 40px;
+    transition: 0.4s;
+}
+
+.pagamento-card:hover .pagamento-icon{
+    box-shadow: 0px 5px 18px rgba(196, 91, 124, 0.2);
+    background-color: #F8D7E3;
 }
 
 .pagamento-card p{
@@ -239,7 +349,7 @@ nav a:hover{
 #modelo{
     background: 
     linear-gradient(to bottom, #FDE2E8, #FFF7F9);
-    padding: 30px 8% 60px;
+    padding: 30px 6% 60px;
 }
 
 #modelo h2{
@@ -261,27 +371,24 @@ nav a:hover{
 .modelos-container{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 25px;
+    gap: 20px;
 }
 
 .modelo-card{
     display: flex;
-    min-height: 200px;
-    background-color: #FFFFFF;
+    aspect-ratio: 3 / 5;
     border-radius: 18px;
     border: 1px solid #F1C7D5;
     align-items: center;
-    box-shadow: 8px 9px 15px rgba(196, 91, 124, 0.25);
+    box-shadow: 0px 5px 15px rgba(196, 91, 124, 0.2);
     justify-content: center;
     overflow: hidden;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .modelo-card:hover{
-    transform:
-        translateY(-2px)
-        scale(1.02);
-    box-shadow: 8px 9px 15px rgba(196, 91, 124, 0.35);
+    box-shadow: 0px 10px 18px rgba(196, 91, 124, 0.25);
+    transform: translateY(-3px);
 }
 
 .modelo-card img{
@@ -289,6 +396,22 @@ nav a:hover{
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+.modelo-1{
+    object-position: top;
+}
+
+.modelo-2{
+    object-position: center 20%;
+}
+
+.modelo-4{
+    object-position: top;
+}
+
+.modelo-6{
+    object-position: left top;
 }
 
 .modelo-botao{
@@ -305,6 +428,10 @@ nav a:hover{
     font-size: 16px;
     box-shadow: 0px 8px 16px rgba(196, 91, 124, 0.35);
     transition: 0.3s;
+}
+
+.icon-botao-modelos{
+    margin-right: 7px;
 }
 
 .modelo-botao:hover{
@@ -349,13 +476,26 @@ nav a:hover{
     padding: 20px 30px;
     border-radius: 18px;
     border: 1px solid #F1C7D5;
-    box-shadow: 8px 9px 15px rgba(196, 91, 124, 0.25);
+    box-shadow: 0px 8px 16px rgba(196, 91, 124, 0.18);
+    transition: 0.4s;
 }
 
 .agendamento-form form{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+}
+
+.agendamento-form:hover{
+    transform: translateY(-3px);
+}
+
+.icon-label{
+    margin-right: 7px;
+}
+
+.icon-botao{
+    margin-left: 7px;
 }
 
 .campo-form{
@@ -380,6 +520,12 @@ nav a:hover{
     padding: 10px 4% 10px;
     font-family: "fonteParagrafo";
     font-size: 12px;
+    transition: 0.3s;
+}
+
+.campo-form input:hover,
+.campo-form select:hover{
+    border-color: #D97A99;
 }
 
 .campo-form input:focus,
@@ -387,6 +533,48 @@ nav a:hover{
     outline: none;
     border-color: #C45B7C;
     box-shadow: 0px 0px 8px rgba(196, 91, 124, 0.35);
+}
+
+#toast{
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: "fonteParagrafo";
+    z-index: 999;
+}
+
+.flatpickr-day{
+    font-family: "fonteServico" !important;
+    font-size: 13px !important;
+}
+
+.flatpickr-day.selected{
+    background-color: #c45b7c !important;
+    border-color: #c45b7c 4 !important;
+}
+
+.flatpickr-day.selected:hover{
+    background-color: #A94668 !important;
+    border-color: #A94668 !important;
+}
+
+.flatpickr-calendar{
+    border-radius: 18px !important;
+    border: 1px solid #F1C7D5 !important;
+    box-shadow: 0px 8px 16px rgba(196, 91, 124, 0.18) !important;
+    font-family: "fonteParagrafo" !important;
+    font-size: 12px !important;
+}
+
+.flatpickr-year-select,
+.numInputWrapper{
+    pointer-events: none !important;
 }
 
 .botao-agendamento{
@@ -398,7 +586,7 @@ nav a:hover{
     border-radius: 18px;
     font-family: "fonteParagrafo";
     font-size: 16px;
-    box-shadow: 0px 8px 16px rgba(196, 91, 124, 0.35);
+    box-shadow: 0px 6px 14px rgba(196, 91, 124, 0.20);
     transition: 0.3s;
     width: 100%;
     padding: 10px 4% 10px;
@@ -421,13 +609,14 @@ nav a:hover{
 
 footer{
     background-color: #FFF7F9;
-    padding: 15px 7% 10px;
+    padding: 24px 7% 18px;
     border-top: 1px solid #F8D7E3;
 }
 
 .footer-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1.2fr;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
     margin: 0 auto;
     max-width: 850px;
     gap: 30px;
@@ -474,8 +663,25 @@ footer{
     color: #A94668;
 }
 
-.footer-atendimento{
-    justify-self: center;
+.icon-redes{
+    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    background-color: #F1C7D5;
+}
+
+.icon-redes:hover{
+    transform: translateY(-3px);
+    background-color: #EFB6C9;
+    box-shadow: 0px 5px 12px rgba(196, 91, 124, 0.18);
+}
+
+.icon-sociais{
+    font-size: 18px;
 }
 
 .footer-atendimento h3{
@@ -487,13 +693,9 @@ footer{
 
 .footer-atendimento p{
     font-family: "fonteServico";
-    font-size: 12px;
+    font-size: 12.5px;
+    line-height: 1.6;
     color: #6F5F66;
-}
-
-.footer-info{
-    justify-self: end;
-    text-align: left;
 }
 
 .footer-info h2{
@@ -505,14 +707,16 @@ footer{
 
 .footer-info p{
     font-family: "fonteServico";
-    font-size: 11.5px;
+    font-size: 12.5px;
     color: #6F5F66;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .footer-copy{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid #F8D7E3;
 }
 
 .footer-copy p{
