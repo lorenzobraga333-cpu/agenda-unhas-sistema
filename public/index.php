@@ -1,11 +1,17 @@
+<?php
+$base = strpos($_SERVER['HTTP_HOST'], 'localhost') !== false 
+    ? '/agenda_unhas/public' 
+    : '/public';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
     <title>Agenda de unhas</title>
-    <link rel="stylesheet" href="assets/css/style.css?v=10">
-    <link rel="stylesheet" href="assets/css/media.css?v=10">
+    <link rel="stylesheet" href="<?= $base ?>/assets/css/style.css?v=11">
+    <link rel="stylesheet" href="<?= $base ?>/assets/css/media.css?v=11">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
@@ -40,7 +46,7 @@
         <a href="#agendamento">Agendar agora</a>
         </div>
         <div class="inicio-foto">
-            <img src="assets/img/foto-hero.jpeg" alt="foto-hero">
+            <img src="<?= $base ?>/assets/img/foto-hero.jpeg" alt="foto-hero">
         </div>
         </div>
     </section>
@@ -141,22 +147,22 @@
     <p>Inspire-se em alguns dos trabalhos realizados.</p>
     <div class="modelos-container">
         <div class="modelo-card">
-            <img src="assets/img/Modelo1.png" class="modelo-1">
+            <img src="<?= $base ?>/assets/img/Modelo1.png" class="modelo-1">
         </div>
         <div class="modelo-card">
-            <img src="assets/img/Modelo2.png" class="modelo-2">
+            <img src="<?= $base ?>/assets/img/Modelo2.jpeg" class="modelo-2">
         </div>
         <div class="modelo-card">
-            <img src="assets/img/Modelo3.png" class="modelo-3">
+            <img src="<?= $base ?>/assets/img/Modelo3.png" class="modelo-3">
         </div>
         <div class="modelo-card">
-            <img src="assets/img/Modelo4.png" class="modelo-4">
+            <img src="<?= $base ?>/assets/img/Modelo4.png" class="modelo-4">
         </div>
         <div class="modelo-card">
-            <img src="assets/img/Modelo5.jpeg" class="modelo-5">
+            <img src="<?= $base ?>/assets/img/Modelo5.jpeg" class="modelo-5">
         </div>
         <div class="modelo-card">
-            <img src="assets/img/Modelo6.jpeg" class="modelo-6">
+            <img src="<?= $base ?>/assets/img/Modelo6.jpeg" class="modelo-6">
         </div>
     </div>
     <a class="modelo-botao" href="https://www.instagram.com/nails.vitoriarosa?igsh=MXcyZTU3emJjaTNxcA==">Ver mais modelos<i class="fas fa-images icon-botao"></i></a>
@@ -187,7 +193,6 @@
     <option value="" diable selected>Selecione seu serviço</option>
     <option value="Molde F1">Molde F1</option>
     <option value="Banho de Gel">Banho de Gel</option>
-    <option value="Blindagem">Blindagem</option>
     <option value="Esmaltação em Gel">Esmaltação em Gel</option>
     <option value="Manicure Tradicional">Manicure Tradicional</option>
 </select>

@@ -93,13 +93,23 @@
     }
 
     .botao-agendamento{
-        
         width: 100%;
     }
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 900px){
+    .inicio-foto{
+        min-width: 320px;
+        max-height: 380px;
+    }
+
+    .inicio-foto img{
+        object-position: left;
+    }
+}
+
+@media screen and (max-width: 800px){
 
     header h1{
         font-size: 21px;
@@ -437,11 +447,15 @@
     }
 
     .modelo-2{
-        object-position: center 40%;
+        object-position: center;
     }
 
     .modelo-4{
         object-position: center 20%;
+    }
+
+    .modelo-5{
+        object-position: center 30%;
     }
 
     .modelo-6{

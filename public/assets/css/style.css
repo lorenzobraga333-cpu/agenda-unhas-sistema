@@ -248,7 +248,8 @@ nav a:hover{
 
 .servicos-tags{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
     margin-top: 20px;
 }
@@ -403,10 +404,14 @@ nav a:hover{
 }
 
 .modelo-2{
-    object-position: center 20%;
+    object-position: top 20%;
 }
 
 .modelo-4{
+    object-position: top;
+}
+
+.modelo-5{
     object-position: top;
 }
 

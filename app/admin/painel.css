@@ -162,6 +162,25 @@ td{
     transition: 0.4s;
 }
 
+.icon-sociais{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #25D366;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 8px;
+    transition: 0.4s;
+}
+
+.icon-sociais:hover{
+    background-color: #1da851;
+    transform: translateY(-1px);
+}
+
 .btn-confirmar:hover,
 .btn-cancelar:hover{
     background-color: #2a2a2a;
@@ -178,13 +197,13 @@ td{
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 800px){
     .tabela-container{
         margin: 0 2% 20px;
     }
 }
 
-@media (max-width: 480px){
+@media (max-width: 520px){
     .painel-tittle{
         font-size: 19px;
     }

@@ -56,7 +56,7 @@
                         <td><?php echo htmlspecialchars($agendamento ["cliente"]); ?></td>
                         <td><?php echo htmlspecialchars($agendamento ["celular"]); ?></td>
                         <td><?php echo htmlspecialchars($agendamento ["servico"]); ?></td>
-                        <td><?php echo htmlspecialchars($agendamento ["data"]); ?></td>
+                        <td><?php echo date('d/m/Y', strtotime($agendamento["data"])); ?></td>
                         <td><?php echo htmlspecialchars($agendamento ["horario"]); ?></td>
                         <td><?php 
                         if($agendamento ["status"] === "confirmado"){

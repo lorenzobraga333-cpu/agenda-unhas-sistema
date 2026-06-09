@@ -1,7 +1,10 @@
 <?php
-require_once __DIR__ . '/../../vendor/autoload.php';
+$root = isset($_SERVER['DOCUMENT_ROOT']) && is_dir($_SERVER['DOCUMENT_ROOT'] . '/vendor') 
+    ? $_SERVER['DOCUMENT_ROOT'] . '/'
+    : __DIR__ . '/../../';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+require_once $root . 'vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable($root);
 $dotenv->load();
 
 $host = $_ENV['DB_HOST'];

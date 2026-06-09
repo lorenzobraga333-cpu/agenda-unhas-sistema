@@ -1,5 +1,4 @@
 <?php
-
     require_once __DIR__ . "/../config/conexao.php";
     
     $cliente = trim($_POST["cliente"] ?? "");
