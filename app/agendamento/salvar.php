@@ -1,4 +1,9 @@
 <?php
+    session_start();
+        if(!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']){
+    header("Location: ../../public/index.php?erro=campos");
+    exit;
+}
     require_once __DIR__ . "/../config/conexao.php";
     
     $cliente = trim($_POST["cliente"] ?? "");

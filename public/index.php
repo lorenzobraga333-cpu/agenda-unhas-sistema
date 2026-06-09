@@ -2,6 +2,11 @@
 $base = strpos($_SERVER['HTTP_HOST'], 'localhost') !== false 
     ? '/agenda_unhas/public' 
     : '/public';
+
+    session_start();
+if(empty($_SESSION['csrf_token'])){
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 ?>
 
 <!DOCTYPE html>
@@ -176,6 +181,7 @@ $base = strpos($_SERVER['HTTP_HOST'], 'localhost') !== false
 
 <div class="agendamento-form">
 <form action="../app/agendamento/salvar.php" method="POST">
+<input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
 
 <div class="campo-form">
 <label for="cliente"><i class="fas fa-user icon-label"></i>Nome:</label>
